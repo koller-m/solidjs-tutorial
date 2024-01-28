@@ -17,14 +17,24 @@ function Reactivity() {
   const product = () => count() * multiplier();
 
   return (
-    <div>
-      <h1>
+    <div class="flex flex-col items-center h-screen">
+      <h1 class="mb-8 text-3xl">
         {count()} x {multiplier()} = {product()}
       </h1>
-      <button onclick={() => setCount(count() + 1)}>increment</button>
-      <button onClick={() => setMultiplier(multiplier() + 1)}>
-        multiplier
-      </button>
+      <div>
+        <button
+          class="bg-black text-white border-none rounded-sm mr-8 py-1 px-2"
+          onclick={() => setCount(count() + 1)}
+        >
+          increment
+        </button>
+        <button
+          class="bg-black text-white border-none rounded-sm py-1 px-2"
+          onClick={() => setMultiplier(multiplier() + 1)}
+        >
+          multiplier
+        </button>
+      </div>
     </div>
   );
 }
